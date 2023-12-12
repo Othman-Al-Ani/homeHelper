@@ -2,9 +2,24 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import axios from 'axios'
+import { MongoClient } from 'mongodb'
+
+
+
+
 
 function App() {
+
+
   const [count, setCount] = useState(0)
+const mongoClient = new MongoClient(
+  'mongodb+srv://OthmanAdmin:nc90gcDjD34oRaAt@cluster0.jazm9vr.mongodb.net/?retryWrites=true&w=majority'
+  );
+
+  mongoClient.db()
+
+
 
   return (
     <>
@@ -33,3 +48,4 @@ function App() {
 }
 
 export default App
+
